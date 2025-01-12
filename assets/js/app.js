@@ -9,15 +9,15 @@ const downArrow = $.getElementById('downArrow');
 let x = 0;
 
 upArrow.addEventListener('click', e => {
-    if (x>'-900') {
-        x = x-300;
+    if (x<0) {
+        x = x+300;
         slide.style.top = x+'px';
     }
 });
 
 downArrow.addEventListener('click', e => {
-    if (x<0) {
-        x = x+300;
+    if (x>'-900') {
+        x = x-300;
         slide.style.top = x+'px';
     }
 })
